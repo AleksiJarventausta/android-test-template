@@ -8,6 +8,7 @@
 
 # "capture" etc description in https://github.com/apluslms/grading-base
 export ANDROID_HOME=/usr/local/lib/android/sdk
+export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
 #export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
 #export LD_LIBRARY_PATH=$ANDROID_HOME/emulator/lib64
 #cp $STUDENT/application.apk /home/codegrade/application.apk
