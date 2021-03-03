@@ -41,13 +41,7 @@ export ANDROID_HOME=/usr/local/lib/android/sdk
 #echo "updating again..."
 #echo y | ${ANDROID_HOME}/tools/android -s update sdk --all --force --no-ui --filter android-$AVD_VERSION,sys-img-x86-google_apis-$AVD_VERSION > /dev/null 
 #
-echo "avds:"
-/usr/local/lib/android/sdk/tools/emulator -list-avds
-echo "Java home: "
-echo $JAVA_HOME
-echo $JAVA_HOME_8_X64
-
-ls /usr/lib/jvm/
+export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
 
 echo "installing avd:"
 #echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-${AVD_VERSION} \
