@@ -23,10 +23,10 @@ chmod u+x ./global_setup.sh
 #	@wdio/mocha-framework
 #Android sdk
 
-export AVD_VERSION=25
+#export AVD_VERSION=25
 #export ANDROID_BUILD_TOOLS_VERSION=25.0.3 
 #export SDK_VERSION=25.2.3
-export ANDROID_HOME=/usr/local/lib/android/sdk
+#export ANDROID_HOME=/usr/local/lib/android/sdk
 #mkdir -p $ANDROID_HOME
 #cd $ANDROID_HOME
 #wget -q -O tools.zip https://dl.google.com/android/repository/tools_r${SDK_VERSION}-linux.zip > /dev/null && \
@@ -41,24 +41,24 @@ export ANDROID_HOME=/usr/local/lib/android/sdk
 #echo "updating again..."
 #echo y | ${ANDROID_HOME}/tools/android -s update sdk --all --force --no-ui --filter android-$AVD_VERSION,sys-img-x86-google_apis-$AVD_VERSION > /dev/null 
 #
-export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+#export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
 
-echo "installing avd:"
+#echo "installing avd:"
 #echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-${AVD_VERSION} \
 #  --device "Nexus S" --name "nexus" --abi "google_apis/x86" >/dev/null
   #--device "Nexus S" --name "nexus" --abi "default/x86" --skin WVGA800
 
-$ANDROID_HOME/tools/bin/sdkmanager "system-images;android-27;google_apis;x86" >/dev/null
-yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+#$ANDROID_HOME/tools/bin/sdkmanager "system-images;android-27;google_apis;x86" >/dev/null
+#yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
-echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n nexus -k "system-images;android-27;google_apis;x86" >/dev/null
+#echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n nexus -k "system-images;android-27;google_apis;x86" >/dev/null
 
-echo "android devices:"
-/usr/local/lib/android/sdk/tools/emulator -list-avds
-echo "############################################ END OF SETUP ###########################################################"
+#echo "android devices:"
+#/usr/local/lib/android/sdk/tools/emulator -list-avds
+#echo "############################################ END OF SETUP ###########################################################"
 
-cd
-echo "avds:"
+#cd
+#echo "avds:"
 $ANDROID_HOME/tools/bin/avdmanager list avd
-xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full 
+xvfb-run $ANDROID_HOME/tools/emulator -avd test -netdelay none -netspeed full 
 echo "############################################ END OF SETUP ###########################################################"
