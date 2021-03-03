@@ -56,3 +56,9 @@ echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n nexus -k "system-imag
 echo "android devices:"
 /usr/local/lib/android/sdk/tools/emulator -list-avds
 echo "############################################ END OF SETUP ###########################################################"
+
+cd
+echo "avds:"
+$ANDROID_HOME/tools/bin/avdmanager list avd
+xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full 
+echo "############################################ END OF SETUP ###########################################################"
