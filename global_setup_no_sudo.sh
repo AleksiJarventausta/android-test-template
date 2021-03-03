@@ -7,13 +7,13 @@
 chmod u+x ./run.sh
 chmod u+x ./global_setup.sh
 
-Appium
+#Appium
 cd
 npm init -y
 npm install --silent -y \
 	appium
 
-Webdriver.io
+#Webdriver.io
 npm install --silent -y --save-dev \
 	@wdio/cli \
 	chai \
