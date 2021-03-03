@@ -15,6 +15,11 @@ cd
 adb start-server
 adb devices
 
+echo "android tools:"
+ls $ANDROID_HOME/tools/
+
+echo "android emulators:"
+ls $ANDROID_HOME/emulator/
 xvfb-run $ANDROID_HOME/tools/emulator64-x86 -avd nexus -netdelay none -netspeed full &
 server_pid=$!
 output=''
