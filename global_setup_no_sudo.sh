@@ -7,20 +7,20 @@
 chmod u+x ./run.sh
 chmod u+x ./global_setup.sh
 
-#Appium
-#cd
-#npm init -y
-#npm install --silent -y \
-#	appium
+Appium
+cd
+npm init -y
+npm install --silent -y \
+	appium
 
-#Webdriver.io
-#npm install --silent -y --save-dev \
-#	@wdio/cli \
-#	chai \
-#	chai-webdriverio \
-#	@wdio/appium-service \
-#	@wdio/local-runner \
-#	@wdio/mocha-framework
+Webdriver.io
+npm install --silent -y --save-dev \
+	@wdio/cli \
+	chai \
+	chai-webdriverio \
+	@wdio/appium-service \
+	@wdio/local-runner \
+	@wdio/mocha-framework
 #Android sdk
 
 #export AVD_VERSION=25

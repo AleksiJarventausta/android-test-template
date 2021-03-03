@@ -5,10 +5,11 @@ on: [push]
 jobs:
   build:
     name: Autograding
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
       - uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
+          script: ~/node_modules/.bin/wdio
