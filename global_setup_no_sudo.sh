@@ -45,6 +45,7 @@ echo "avds:"
 /usr/local/lib/android/sdk/tools/emulator -list-avds
 echo "Java home: "
 echo $JAVA_HOME
+echo $JAVA_HOME_8_X64
 
 echo "installing avd:"
 #echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-${AVD_VERSION} \
