@@ -48,5 +48,5 @@ echo "installing avd:"
 #  --device "Nexus S" --name "nexus" --abi "google_apis/x86" >/dev/null
   #--device "Nexus S" --name "nexus" --abi "default/x86" --skin WVGA800
 
-$ANDROID_HOME/tools/bin/avdmanager create avd -n nexus -k "system-images;android-25;google_apis;x86"
+$ANDROID_HOME/tools/bin/avdmanager create avd -n nexus -k "system-images;android-27;google_apis;x86"
 /usr/local/lib/android/sdk/tools/emulator -list-avds
