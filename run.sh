@@ -20,6 +20,8 @@ ls $ANDROID_HOME/tools/
 
 echo "android platforms:"
 ls $ANDROID_HOME/platforms/
+echo "android avds:"
+$ANDROID_HOME/tools/emulator -list-avds
 xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full &
 server_pid=$!
 output=''
