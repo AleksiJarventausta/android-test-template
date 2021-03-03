@@ -47,6 +47,8 @@ echo "Java home: "
 echo $JAVA_HOME
 echo $JAVA_HOME_8_X64
 
+java --version
+
 echo "installing avd:"
 #echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-${AVD_VERSION} \
 #  --device "Nexus S" --name "nexus" --abi "google_apis/x86" >/dev/null
