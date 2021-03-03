@@ -44,6 +44,6 @@ export ANDROID_HOME=/usr/local/lib/android/sdk
 
 /usr/local/lib/android/sdk/tools/emulator -list-avds
 
-echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-$AVD_VERSION \
+echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-${AVD_VERSION} \
   --device "Nexus S" --name "nexus" --abi "google_apis/x86" >/dev/null
   #--device "Nexus S" --name "nexus" --abi "default/x86" --skin WVGA800
