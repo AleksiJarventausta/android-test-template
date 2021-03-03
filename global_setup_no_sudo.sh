@@ -47,7 +47,7 @@ echo "Java home: "
 echo $JAVA_HOME
 echo $JAVA_HOME_8_X64
 
-java --version
+ls /usr/lib/jvm/
 
 echo "installing avd:"
 #echo y | ${ANDROID_HOME}/tools/android -s create avd --force --name android-${AVD_VERSION} \
