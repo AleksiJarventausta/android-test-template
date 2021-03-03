@@ -26,6 +26,7 @@ chmod u+x ./global_setup.sh
 export AVD_VERSION=25
 #export ANDROID_BUILD_TOOLS_VERSION=25.0.3 
 #export SDK_VERSION=25.2.3
+export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 export ANDROID_HOME=/usr/local/lib/android/sdk
 #mkdir -p $ANDROID_HOME
 #cd $ANDROID_HOME
