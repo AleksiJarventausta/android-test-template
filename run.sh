@@ -7,7 +7,7 @@
 # Append the required support files to test user solution.
 
 # "capture" etc description in https://github.com/apluslms/grading-base
-#export ANDROID_HOME=~/Android/Sdk
+export ANDROID_HOME=/usr/local/lib/android/sdk
 #export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
 #export LD_LIBRARY_PATH=$ANDROID_HOME/emulator/lib64
 #cp $STUDENT/application.apk /home/codegrade/application.apk
@@ -15,7 +15,7 @@ cd
 adb start-server
 adb devices
 
-xvfb-run emulator64-x86 -avd nexus -netdelay none -netspeed full &
+xvfb-run $ANDROID_HOME/tools/emulator64-x86 -avd nexus -netdelay none -netspeed full &
 server_pid=$!
 output=''
 while [[ ${output:0:7} != 'stopped' ]]; do
