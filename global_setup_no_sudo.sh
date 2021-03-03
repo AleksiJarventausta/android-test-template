@@ -52,4 +52,7 @@ $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-27;google_apis;x86" >/
 yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
 echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n nexus -k "system-images;android-27;google_apis;x86" >/dev/null
+
+echo "android devices:"
 /usr/local/lib/android/sdk/tools/emulator -list-avds
+echo "############################################ END OF SETUP ###########################################################"

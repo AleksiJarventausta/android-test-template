@@ -12,10 +12,9 @@ export ANDROID_HOME=/usr/local/lib/android/sdk
 #export LD_LIBRARY_PATH=$ANDROID_HOME/emulator/lib64
 #cp $STUDENT/application.apk /home/codegrade/application.apk
 cd
-adb start-server
-adb devices
 
-$ANDROID_HOME/tools/bin/sdkmanager --list
+echo "avds:"
+$ANDROID_HOME/tools/bin/avdmanager list avd
 
 xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full &
 server_pid=$!
