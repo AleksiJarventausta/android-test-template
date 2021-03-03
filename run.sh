@@ -15,12 +15,12 @@ cd
 adb start-server
 adb devices
 
-echo "android tools:"
+echo "android tools bin:"
 ls $ANDROID_HOME/tools/
 
-echo "android emulators:"
-ls $ANDROID_HOME/emulator/
-xvfb-run $ANDROID_HOME/tools/emulator64-x86 -avd nexus -netdelay none -netspeed full &
+echo "android platforms:"
+ls $ANDROID_HOME/platforms/
+xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full &
 server_pid=$!
 output=''
 while [[ ${output:0:7} != 'stopped' ]]; do
