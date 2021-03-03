@@ -12,16 +12,20 @@ export ANDROID_HOME=/usr/local/lib/android/sdk
 #export LD_LIBRARY_PATH=$ANDROID_HOME/emulator/lib64
 #cp $STUDENT/application.apk /home/codegrade/application.apk
 cd
+adb start-server
+adb devices
+
+$ANDROID_HOME/tools/bin/sdkmanager --list
 
 xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full &
 server_pid=$!
-output=''
-while [[ ${output:0:7} != 'stopped' ]]; do
-  output=`$ANDROID_HOME/platform-tools/adb shell getprop init.svc.bootanim`
-  sleep 1
-done
+#output=''
+#while [[ ${output:0:7} != 'stopped' ]]; do
+#  output=`$ANDROID_HOME/platform-tools/adb shell getprop init.svc.bootanim`
+#  sleep 1
+#done
 
 
-./node_modules/.bin/wdio 
-kill $server_pid
-wait $server_pid 2>/dev/null
+#./node_modules/.bin/wdio 
+#kill $server_pid
+#wait $server_pid 2>/dev/null
