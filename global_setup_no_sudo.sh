@@ -26,7 +26,7 @@ npm install --silent -y --save-dev \
 #export AVD_VERSION=25
 #export ANDROID_BUILD_TOOLS_VERSION=25.0.3 
 #export SDK_VERSION=25.2.3
-export ANDROID_HOME=/usr/local/lib/android/sdk
+export ANDROID_HOME=/users/runner/Library/Android/sdk
 #mkdir -p $ANDROID_HOME
 #cd $ANDROID_HOME
 #wget -q -O tools.zip https://dl.google.com/android/repository/tools_r${SDK_VERSION}-linux.zip > /dev/null && \
@@ -64,6 +64,7 @@ $ANDROID_HOME/tools/bin/sdkmanager --install emulator > /dev/null
 $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-29;default;x86' > /dev/null
 $ANDROID_HOME/tools/bin/avdmanager create avd --force -n test --abi 'default/x86' --package 'system-images;android-29;default;x86'
 $ANDROID_HOME/tools/bin/avdmanager list avd
+echo "Everything installed, starting emulator...."
 $ANDROID_HOME/tools/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
 output=''
 while [[ ${output:0:7} != 'stopped' ]]; do
