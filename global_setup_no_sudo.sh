@@ -71,3 +71,12 @@ echo "Everything installed, starting emulator...."
 $ANDROID_HOME/emulator/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
 $ANDROID_HOME/platform-tools/adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
 echo "############################################ END OF SETUP ###########################################################"
+cd 
+#output=''
+#while [[ ${output:0:7} != 'stopped' ]]; do
+#  output=`$ANDROID_HOME/platform-tools/adb shell getprop init.svc.bootanim`
+#  sleep 1
+#done
+
+
+./node_modules/.bin/wdio 
