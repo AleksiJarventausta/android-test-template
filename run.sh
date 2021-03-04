@@ -7,18 +7,12 @@
 # Append the required support files to test user solution.
 
 # "capture" etc description in https://github.com/apluslms/grading-base
-export ANDROID_HOME=/usr/local/lib/android/sdk
-export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+export ANDROID_HOME=/users/runner/Library/Android/sdk
 #export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
 #export LD_LIBRARY_PATH=$ANDROID_HOME/emulator/lib64
 #cp $STUDENT/application.apk /home/codegrade/application.apk
-cd
+cd 
 
-echo "avds:"
-$ANDROID_HOME/tools/bin/avdmanager list avd
-
-xvfb-run $ANDROID_HOME/tools/emulator -avd nexus -netdelay none -netspeed full &
-server_pid=$!
 #output=''
 #while [[ ${output:0:7} != 'stopped' ]]; do
 #  output=`$ANDROID_HOME/platform-tools/adb shell getprop init.svc.bootanim`
@@ -26,6 +20,7 @@ server_pid=$!
 #done
 
 
-#./node_modules/.bin/wdio 
+./node_modules/.bin/wdio 
+$ANDROID_HOME/platform-tools/adb -s emulator-5554 emu kill
 #kill $server_pid
 #wait $server_pid 2>/dev/null
