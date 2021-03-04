@@ -69,9 +69,5 @@ echo "installing avd..."
 echo no | $ANDROID_HOME/tools/bin/avdmanager create avd --force -n test --abi 'default/x86' --package 'system-images;android-29;default;x86'
 echo "Everything installed, starting emulator...."
 $ANDROID_HOME/emulator/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
-output=''
-while [[ ${output:0:7} != 'stopped' ]]; do
-  output=`$ANDROID_HOME/platform-tools/adb shell getprop init.svc.bootanim`
-  sleep 1
-done
+$ANDROID_HOME/platform-tools/adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
 echo "############################################ END OF SETUP ###########################################################"
