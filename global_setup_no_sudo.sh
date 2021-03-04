@@ -2,6 +2,7 @@
 
 cp test*.js ~/
 cp wdio.conf.js ~/
+cp application.apk ~/
 
 #Chmod next sh file(s)
 chmod u+x ./run.sh
