@@ -65,7 +65,7 @@ $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-29;default;x
 echo no | $ANDROID_HOME/tools/bin/avdmanager create avd --force -n test --abi 'default/x86' --package 'system-images;android-29;default;x86'
 $ANDROID_HOME/tools/bin/avdmanager list avd
 echo "Everything installed, starting emulator...."
-$ANDROID_HOME/tools/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
+$ANDROID_HOME/emulator/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
 output=''
 while [[ ${output:0:7} != 'stopped' ]]; do
   output=`$ANDROID_HOME/platform-tools/adb shell getprop init.svc.bootanim`
