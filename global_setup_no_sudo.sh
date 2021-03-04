@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#cp test*.js /home/codegrade/
-#cp wdio.conf.js /home/codegrade/
+cp test*.js ~/
+cp wdio.conf.js ~/
 
 #Chmod next sh file(s)
 chmod u+x ./run.sh
