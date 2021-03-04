@@ -62,7 +62,7 @@ export ANDROID_HOME=/users/runner/Library/Android/sdk
 $ANDROID_HOME/tools/bin/sdkmanager --install 'build-tools;30.0.3' platform-tools 'platforms;android-29' > /dev/null
 $ANDROID_HOME/tools/bin/sdkmanager --install emulator > /dev/null
 $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-29;default;x86' > /dev/null
-$ANDROID_HOME/tools/bin/avdmanager create avd --force -n test --abi 'default/x86' --package 'system-images;android-29;default;x86'
+echo no | $ANDROID_HOME/tools/bin/avdmanager create avd --force -n test --abi 'default/x86' --package 'system-images;android-29;default;x86'
 $ANDROID_HOME/tools/bin/avdmanager list avd
 echo "Everything installed, starting emulator...."
 $ANDROID_HOME/tools/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
