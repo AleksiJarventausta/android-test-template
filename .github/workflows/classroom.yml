@@ -8,5 +8,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+        run: env
       - uses: education/autograding@v1
-        env: JAVA_HOME: ${{env.JAVA_HOME_8}}
