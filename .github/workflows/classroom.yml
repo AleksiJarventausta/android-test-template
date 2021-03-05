@@ -4,8 +4,18 @@ on: [push]
 
 jobs:
   build:
-    name: Autograding
     runs-on: macos-latest
+    env:
+      ANDROID_HOME: /users/runner/Library/Android/sdk
+      JAVA_HOME: /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
     steps:
       - uses: actions/checkout@v2
+      - run: chmod u+x global_setup_no_sudo.sh
+      - run: ./global_setup_no_sudo.sh
+
+  test_run:
+    needs: build
+    steps:
+      - run: $ANDROID_HOME/emulator/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
       - uses: education/autograding@v1
+      - run: $ANDROID_HOME/platform-tools/adb -s emulator-5554 emu kill

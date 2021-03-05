@@ -2,7 +2,7 @@
     "tests": [
       {
         "name": "Text & Button test",
-        "setup": "npm run-script initTest",
+        "setup": "",
         "run": "npm run-script testAction",
         "input": "",
         "output": "",
