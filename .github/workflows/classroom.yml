@@ -15,6 +15,7 @@ jobs:
 
   test_run:
     needs: build
+    runs-on: macos-latest
     steps:
       - run: $ANDROID_HOME/emulator/emulator -avd test -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim &
       - uses: education/autograding@v1
