@@ -80,5 +80,3 @@ cd
 #  sleep 1
 #done
 
-
-./node_modules/.bin/wdio 
