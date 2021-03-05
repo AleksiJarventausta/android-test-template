@@ -8,7 +8,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/H
 
 #Chmod next sh file(s)
 chmod u+x ./run.sh
-chmod u+x ./global_setup.sh
 
 #Appium
 npm init -y
