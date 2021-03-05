@@ -7,4 +7,5 @@ jobs:
     name: Autograding
     runs-on: macos-latest
     steps:
-      run: env
+      - name: Envi
+        run: env
