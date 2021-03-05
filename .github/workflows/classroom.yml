@@ -8,7 +8,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: AdoptOpenJDK/install-jdk@v1
-        with:
-          version: "8"
       - uses: education/autograding@v1
+        env: JAVA_HOME:${{env.JAVA_HOME_8}}
