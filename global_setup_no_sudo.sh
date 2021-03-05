@@ -29,5 +29,4 @@ npm install --silent -y --save-dev \
 $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-29;default;x86' > /dev/null
 echo "installing avd..."
 echo no | $ANDROID_HOME/tools/bin/avdmanager create avd --force -n test --abi 'default/x86' --package 'system-images;android-29;default;x86'
-echo "Everything installed, starting emulator...."
 echo "############################################ END OF SETUP ###########################################################"
