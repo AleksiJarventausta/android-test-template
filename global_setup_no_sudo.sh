@@ -60,6 +60,8 @@ npm install --silent -y --save-dev \
 #cd
 #echo "avds:"
 
+echo "env:"
+env
 export ANDROID_HOME=/users/runner/Library/Android/sdk
 echo "setting up sdk..."
 #$ANDROID_HOME/tools/bin/sdkmanager --install 'build-tools;30.0.3' platform-tools 'platforms;android-29' > /dev/null
