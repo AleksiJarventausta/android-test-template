@@ -7,5 +7,5 @@ jobs:
     name: Autograding
     runs-on: macos-latest
     steps:
-      - name: Envi
-        run: env
+      - uses: actions/checkout@v2
+      - uses: education/autograding@v1

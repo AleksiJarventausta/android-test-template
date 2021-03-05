@@ -61,8 +61,8 @@ npm install --silent -y --save-dev \
 #echo "avds:"
 
 echo "env:"
-env
 export ANDROID_HOME=/users/runner/Library/Android/sdk
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 echo "setting up sdk..."
 #$ANDROID_HOME/tools/bin/sdkmanager --install 'build-tools;30.0.3' platform-tools 'platforms;android-29' > /dev/null
 #$ANDROID_HOME/tools/bin/sdkmanager --install emulator > /dev/null
